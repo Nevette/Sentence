@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+apply plugin: 'application'
+mainClassName= 'SentenceParser'
+
+group 'Sentence'
+
+sourceCompatibility = 1.9
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.1.0'
+}
+
+jar {
+    manifest{
+        attributes(
+            'Main-Class': 'SentenceParser'
+        )
+    }
+}
