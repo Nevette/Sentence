@@ -18,7 +18,6 @@ public class CsvParserTest {
     @Before
     public void setup() {
         csvParser = new CsvParser();
-
     }
 
     @After

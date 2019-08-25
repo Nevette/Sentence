@@ -18,10 +18,6 @@ public class XmlParserTest {
     @Before
     public void setup() {
         xmlParser = new XmlParser();
-        File resultFile = new File(TEST_FILE_NAME + ".xml");
-        if (resultFile.exists()) {
-            resultFile.delete();
-        }
     }
 
     @After

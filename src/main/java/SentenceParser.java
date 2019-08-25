@@ -27,12 +27,12 @@ public class SentenceParser {
     }
 
     public void run() {
+        Path inputFilePath = getInputFilePath();
+        if (!verifyIfPathExists(inputFilePath)) {
+            System.out.print("Given file does not exist. Please provide valid path.");
+            return;
+        }
         try {
-            Path inputFilePath = getInputFilePath();
-            if (!verifyIfPathExists(inputFilePath)) {
-                System.out.print("Given file does not exist. Please provide valid path.");
-                return;
-            }
             String inputFileName = getInputFileName(inputFilePath);
 
             xmlParser.init(inputFileName);
